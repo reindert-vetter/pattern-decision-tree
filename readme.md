@@ -14,7 +14,7 @@ flowchart TB
     individual --> |No| middleware1[Middleware]
     verify --> |Authorization| policy[Policy]
 
-    verify --> |None| modify_request{Modify request?}
+    verify --> |No| modify_request{Modify request?}
     modify_request --> |Yes| one_endoint{One endpoint?}
     one_endoint --> |Yes| request2[Request]
     one_endoint --> |No| middleware2[Middleware]
@@ -32,7 +32,7 @@ flowchart TB
 
     triggered_by ---> |Other| hide_complexity{"Hide complexity?"}
     hide_complexity --> |Yes| behind_one_function{"Behind \n one fuction?"}
-    triggered_by --> |Comment input| command_input{Command input?}
+    triggered_by --> |Command input| command_input{Command input?}
     command_input --> |Artisan migrate| migration[Migration]
     command_input --> |Other| command[Command]
 
