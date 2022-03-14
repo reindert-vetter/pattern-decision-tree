@@ -26,7 +26,7 @@ flowchart TB
     triggered_by --> |Database adjustment| observer[Observer]
     triggered_by --> |Http| controller[Controller]
 
-    triggered_by --> |Other| hide_complexity{"Hide complexity?"}
+    triggered_by ---> |Other| hide_complexity{"Hide complexity?"}
     hide_complexity --> |Yes| behind_one_function{"Behind \n one fuction?"}
     triggered_by --> |Comment input| command_input{Command input?}
     command_input --> |Artisan migrate| migration[Migration]
