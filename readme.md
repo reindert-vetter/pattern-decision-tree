@@ -1,5 +1,7 @@
 # Pattern Decision Tree
 
+Ever wondered which file your code should be in? Based on this tree you can determine what kind of code you are working with.
+
 Create a [pull request](https://github.com/reindert-vetter/pattern-decision-diagram/pulls) or start a [discussion](https://github.com/reindert-vetter/pattern-decision-diagram/discussions).
 
 ```mermaid
