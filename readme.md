@@ -1,3 +1,5 @@
+# Pattern Decision Diagram
+
 Create a [pull request](https://github.com/reindert-vetter/pattern-decision-diagram/pulls) or start a [discussion](https://github.com/reindert-vetter/pattern-decision-diagram/discussions).
 
 ```mermaid
