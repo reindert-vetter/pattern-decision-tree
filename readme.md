@@ -2,7 +2,7 @@
 
 Ever wondered which file your code should be in? Based on this tree you can determine what kind of code you are working with.
 
-The diagram was created with [Mermaid](https://mermaid-js.github.io/mermaid/#/). So you can easily make adjustments yourself. Create a [pull request](https://github.com/reindert-vetter/pattern-decision-diagram/pulls) or start a [discussion](https://github.com/reindert-vetter/pattern-decision-diagram/discussions).
+The diagram was created with [Mermaid](https://mermaid-js.github.io/mermaid/#/). So you can easily make adjustments [yourself](https://github.com/reindert-vetter/pattern-decision-tree/edit/main/readme.md) or start a [discussion](https://github.com/reindert-vetter/pattern-decision-diagram/discussions).
 
 ```mermaid
 flowchart TB
