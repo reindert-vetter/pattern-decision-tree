@@ -20,11 +20,13 @@ flowchart TB
     one_endoint --> |No| middleware2[Middleware]
     
     modify_request ----> |No| modify_response{Modify response?}
-    modify_response --> |Yes| one_resource{"Apply to \n one resource?"}
+    modify_response --> |Yes| because_of_an_error{"Because of \n an error?"}
+    because_of_an_error --> |Yes| exception[Exception]
+    because_of_an_error --> |No| one_resource{"Apply to \n one resource?"}
     one_resource --> |Yes| resource[Resource]
     one_resource --> |No| middleware3[Middleware]
 
-    modify_response --> |No| interact_with_something{Interact \n with something?}
+    modify_response ---> |No| interact_with_something{Interact \n with something?}
     interact_with_something --> |Yes| triggered_by{"Triggered by?"}
     triggered_by --> |Event| listener[Listener]
     triggered_by --> |Database adjustment| observer[Observer]
