@@ -26,8 +26,8 @@ flowchart TB
     one_resource --> |Yes| resource[Resource]
     one_resource --> |No| middleware3[Middleware]
 
-    modify_response ---> |No| interact_with_something{Interact \n with something?}
-    interact_with_something --> |Yes| triggered_by{"Triggered by?"}
+    modify_response ---> |No| logic{"It it business logic?"}
+    logic --> |Yes| triggered_by{"Triggered by?"}
     triggered_by --> |Event| listener[Listener]
     triggered_by --> |Database adjustment| observer[Observer]
     triggered_by --> |Http| controller[Controller]
@@ -52,7 +52,7 @@ flowchart TB
     need_return_value --> |Yes| service[Service]
     need_return_value --> |No| action[Action]
     
-    interact_with_something --> |No| create_something{Create something?}
+    logic --> |No| create_something{Create something?}
     create_something ---> |Yes| construct_dependency{Construct \n dependency \n injection?}
     construct_dependency --> |Yes| service_provider[Service Provider]
     construct_dependency --> |No| by_one_method{By one method?}
