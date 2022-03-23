@@ -8,15 +8,15 @@ The diagram was created with [Mermaid](https://mermaid-js.github.io/mermaid/#/).
 flowchart TB
     verify{Verify?}
     verify --> |Request| validate_field{"Validate field?"}
-    validate_field --> |Yes| rule[Rule]
-    validate_field --> |No|individual{Individual \n endpoint}
-    individual --> |Yes| request1[Request]
-    individual --> |No| middleware1[Middleware]
+    validate_field --> |Yes| multiple{Multiple?}
+    multiple --> |Yes| form_request1[Form Request]
+    multiple --> |No| rule[Rule]
+    validate_field --> |No| middleware1[Middleware]
     verify --> |Authorization| policy[Policy]
 
     verify --> |No| modify_request{Modify request?}
-    modify_request --> |Yes| one_endoint{One endpoint?}
-    one_endpoint --> |Yes| request2[Request]
+    modify_request --> |Yes| one_endpoint{One request?}
+    one_endpoint --> |Yes| form_request2[Form Request]
     one_endpoint --> |No| middleware2[Middleware]
     
     modify_request ----> |No| modify_response{Modify response?}
