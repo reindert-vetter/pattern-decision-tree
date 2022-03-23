@@ -16,8 +16,8 @@ flowchart TB
 
     verify --> |No| modify_request{Modify request?}
     modify_request --> |Yes| one_endoint{One endpoint?}
-    one_endoint --> |Yes| request2[Request]
-    one_endoint --> |No| middleware2[Middleware]
+    one_endpoint --> |Yes| request2[Request]
+    one_endpoint --> |No| middleware2[Middleware]
     
     modify_request ----> |No| modify_response{Modify response?}
     modify_response --> |Yes| because_of_an_error{"Because of \n an error?"}
@@ -33,7 +33,7 @@ flowchart TB
     triggered_by --> |Http| controller[Controller]
 
     triggered_by ---> |Other| hide_complexity{"Hide complexity?"}
-    hide_complexity --> |Yes| behind_one_function{"Behind \n one fuction?"}
+    hide_complexity --> |Yes| behind_one_function{"Behind \n one function?"}
     triggered_by --> |Command input| command_input{Command input?}
     command_input --> |Artisan migrate| migration[Migration]
     command_input --> |Other| command[Command]
